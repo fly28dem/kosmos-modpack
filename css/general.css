@@ -1,0 +1,136 @@
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Скролбар */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(133, 133, 133);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 0px;
+}
+
+/* Общие */
+body {
+    background-image: url(../img/background.png);
+    background-attachment: fixed;
+    overflow-x: clip;
+}
+
+.main-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(36, 36, 36, 0.2);
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-navigation a {
+    color: rgb(228, 222, 220);
+}
+
+.main-navigation li {
+    font-size: 24px;
+}
+
+.main-navigation a:hover {
+    filter: brightness(110%);
+}
+
+/* Лого */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo-text {
+    font-size: 36px;
+    color: white;
+}
+
+.logo-img {
+    width: 32px;
+}
+
+/* Основное содержимое */
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+} 
+
+/* Типографика */
+h1, h2, h3 {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p {
+    display: inline-block;
+    text-align: center;
+    width: 50vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* Секция с изображениями */
+.image-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper__item img {
+    padding: 20px;
+    width: 22vw;
+    height: 18vh;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
+/* Подвал */
+footer {
+    height: 7vh;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(36, 36, 36, 0.2);
+    color: rgb(236, 231, 229);
+    font-family: "Open Sans", sans-serif;
+}
