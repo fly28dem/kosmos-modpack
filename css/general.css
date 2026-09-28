@@ -19,18 +19,30 @@ body {
     background-image: url(../img/background.png);
     background-attachment: fixed;
     overflow-x: clip;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.main-navigation {
+.navigation-container {
     position: sticky;
     top: 0;
     z-index: 1;
 
-    height: 7vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    background-color: rgba(146, 146, 146, 0.3);
+    background: linear-gradient(89deg,rgba(156, 156, 160, 0.2) 0%, rgba(51, 54, 63, 0.1) 100%);
+    backdrop-filter: blur(11px);
+}
+
+.main-navigation {
+    height: 6vh;
+    width: 72%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(36, 36, 36, 0.2);
+    
     font-family: "Open Sans", sans-serif;
 }
 
@@ -39,27 +51,34 @@ body {
 }
 
 .main-navigation li {
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 .main-navigation a:hover {
     filter: brightness(110%);
 }
 
+.right-navigation {
+    display: flex;
+    gap: 3vw;
+}
+
 /* Лого */
 .logo-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
 }
 
 .logo-text {
-    font-size: 36px;
+    font-size: 2.4vh;
     color: white;
 }
 
 .logo-img {
-    width: 32px;
+    width: 4vh;
+    border-radius: 2px;
 }
 
 /* Основное содержимое */
@@ -76,32 +95,33 @@ body {
 h1, h2, h3 {
     margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
+    font-size: 3.3vh;
     font-weight: 600;
     color: white;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 3.2vh;
     margin-top: 10px;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 2.4vh;
 }
 
 p {
+    width: 50vw;
     display: inline-block;
     text-align: center;
-    width: 50vw;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 1.9vh;
     color: white;
 }
 
 /* Секция с изображениями */
 .image-wrapper {
-    margin-top: 30px;
+    margin-top: 15px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -116,11 +136,17 @@ p {
 }
 
 .image-wrapper__item img {
+    margin-top: 10px;
     padding: 20px;
     width: 22vw;
     height: 18vh;
     object-fit: cover;
-    border-radius: 32px;
+    border-radius: 24px;
+}
+
+.image-description {
+    margin-top: 15px;
+    width: 20vw;
 }
 
 /* Список модов */
@@ -128,11 +154,12 @@ p {
     padding: 5px 15px;
     margin: 5px;
     border-radius: 12px;
-    background-color: rgba(41, 41, 41, 0.5);
+    background-color: rgba(20, 19, 19, 0.2);
+    backdrop-filter: blur(5px);
     
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 1.9vh;
     color: rgb(230, 228, 228);
 
 }
@@ -151,27 +178,35 @@ p {
 .modlist-wrapper__item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    max-width: 33vh;
+    
 }
 
 .modlist h1 {
-    margin: 30px 0;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .modlist h2 {
+    text-align: center;
     margin-top: 60px;
     margin-bottom: 15px;
 }
 
 /* Подвал */
 footer {
-    height: 7vh;
-    margin-top: 10vh;
+    height: 6vh;
+    margin-top: 7vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(36, 36, 36, 0.2);
-    color: rgb(236, 231, 229);
     font-family: "Open Sans", sans-serif;
+    font-size: 1.9vh;
+    color: rgb(236, 231, 229);
+
+    background-color: rgba(146, 146, 146, 0.3);
+    background: linear-gradient(89deg,rgba(156, 156, 160, 0.1) 0%, rgba(51, 54, 63, 0.1) 100%);
+    backdrop-filter: blur(3px);
 }
